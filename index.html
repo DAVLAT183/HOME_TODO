@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Students</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .students-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .student-card {
+      background: #1e293b;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .avatar {
+      font-size: 2rem;
+    }
+
+    .course {
+      background: #0f172a;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bottom {
+      margin-top: 1rem;
+    }
+
+    .bottom span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Students</h1>
+  <input type="text" class="search" placeholder="search..." />
+
+  <button class="open-modal">➕ Add Student</button>
+
+  <dialog class="modal">
+    <form method="dialog" id="add-form">
+      <h2>Add New Student</h2>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="phone" placeholder="Phone" required>
+      <input type="number" name="age" placeholder="Age" required>
+      <input type="text" name="gender" placeholder="Gender" required>
+      <input type="text" name="group" placeholder="Group" required>
+      <input type="date" name="date" required>
+      <select name="status">
+        <option value="Active">Active</option>
+        <option value="inActive">inActive</option>
+      </select>
+      <div class="form-btns">
+        <button type="submit">Add</button>
+        <button type="button" class="close-modal">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="modal" id="edit-modal">
+    <form method="dialog" id="edit-form">
+      <h2>Edit Student</h2>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="phone" placeholder="Phone" required>
+      <input type="number" name="age" placeholder="Age" required>
+      <input type="text" name="gender" placeholder="Gender" required>
+      <input type="text" name="group" placeholder="Group" required>
+      <input type="date" name="date" required>
+      <select name="status">
+        <option value="Active">Active</option>
+        <option value="inActive">inActive</option>
+      </select>
+      <div class="form-btns">
+        <button type="submit">Save</button>
+        <button type="button" id="close-edit">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+
+  <div class="students-grid"></div>
+
+  <script src="all.js"></script>
+</body>
+
+</html>

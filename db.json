@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "name": "Yosin Ghairatzoda",
+      "phone": "00606070733333",
+      "age": 16,
+      "gender": "Male",
+      "group": "Python(1) July 2025",
+      "date": "1111-11-11",
+      "status": "inActive",
+      "id": "1"
+    },
+    {
+      "name": "cdsaccascascvdvdfvd",
+      "phone": "vdas",
+      "age": 24213,
+      "gender": "4123",
+      "group": "4123",
+      "date": "1313-02-12",
+      "status": "Active",
+      "id": "5b3a"
+    }
+  ]
+}
